@@ -1,0 +1,209 @@
+Received: from ucsinet21.oracle.com (/156.151.31.93)
+	by default (Oracle Beehive Gateway v4.0)
+	with ESMTP ; Fri, 01 Feb 2013 11:37:24 -0800
+Received: from aserp1020.oracle.com (aserp1020.oracle.com [141.146.126.67])
+	by ucsinet21.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id r11JbNaJ019551
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <julie.garrett@oracle.com>; Fri, 1 Feb 2013 19:37:24 GMT
+Received: from online.itwhitepapers.com (online.itwhitepapers.com [66.186.127.67])
+	by aserp1020.oracle.com (Sentrion-MTA-4.2.2/Sentrion-MTA-4.2.2) with SMTP id r11JbIf4023667
+	for <julie.garrett@oracle.com>; Fri, 1 Feb 2013 19:37:20 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt; l=6726;
+ d=online.itwhitepapers.com;s=2008;
+ h=from;
+ bh=XMEAY7A7Voc2Kv8M9/QoY3ICoPWpU9Ge7WwDo3wTIwg=;
+ b=bDcwdQlzly1y8GXfHEilej0L9lvXGhGN67rJ5ORd2bnOf13wGusUucS0G1JZwyTsMwO2xooU
+ 3t/uXCPUndGyyA==;
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=2008; d=online.itwhitepapers.com;
+ h=from;
+ b=ELUi3e4CqueqfLLQkwYSXBiGhqL3cR8gnj3TQLmun9+2OoXpQTSZg2HIPMjJ1BZVWk41EmNZ 5G+wUNFsWrvx7w==
+From: "ITwhitepapers Business Intelligence" <online_resources@online.itwhitepapers.com>
+To: julie.garrett@oracle.com
+Subject: iPad in Business: Apps in Business
+Date: Fri, 01 Feb 2013 12:00:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="MIMEBoundary3221aa038a37273ffe1e9775296d4f7f"
+List-Unsubscribe: <mailto:leave-8958603-1255580627.4bf97ee67c483a12f60dab89ab4c999b@online.itwhitepapers.com>
+Message-ID: <LYRIS-1255580627-8958603-2013.02.01-12.00.32--julie.garrett#oracle.com@online.itwhitepapers.com>
+X-Flow-Control-Info: class=Default reputation=ipRepBelow100 ip=66.186.127.67
+	ct-class=G1 ct-vol1=0 ct-vol2=0 ct-vol3=0 ct-risk=0 ct-spam1=0
+	ct-spam2=0 ct-bulk=0 rcpts=1 size=6728
+X-Source-IP: online.itwhitepapers.com [66.186.127.67]
+X-MM-CT-Classification: not spam
+X-MM-CT-RefID: str=0001.0A090206.510C1973.001C:SCFSTAT4264491,ss=1,re=-4.000,fgs=0
+
+This is a multi-part message in MIME format.
+
+--MIMEBoundary3221aa038a37273ffe1e9775296d4f7f
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+[SNIPPET]
+
+
+
+ITwhitepapers Business Intelligence Alert
+
+iPad in Business: Apps in Business
+
+Please join us at this exclusive on-demand seminar. It'll take about half a=
+n hour and it's absolutely free
+
+Explore the world of business apps for iPad and start transforming the way =
+you work. Discover apps to stay productive in the office or on the go.
+There are a world of possibilities with in-house app development for iPad. =
+Explore what businesses are creating in-house and get started building brea=
+kthrough apps for your employees.=20
+
+With apps from the app store or in-house apps, you'll always have the right=
+ information at the right time. You can even learn about different ways on =
+how apps can be distributed in your organization.=20
+
+There will also be a Q&A segment where viewer solicited questions will be a=
+nswered by experienced Apple Business Experts.
+
+=
+http://online.itwhitepapers.com/t/8958603/1255580627/680624/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3Da21c6699=
+
+Follow ITwhitepapers on Twitter:
+=
+http://online.itwhitepapers.com/t/8958603/1255580627/576789/0/=
+
+___________________________________________________________________________=
+_______
+
+You are subscribed to=20=
+itwhitepapersalerts_bi=
+ as=20=
+julie.garrett@oracle.com=
+.
+To unsubscribe, please go to:=20=
+http://online.itwhitepapers.com/t/8958603/1255580627/131135/0/?90482085=3Da=
+HR0cDovL29ubGluZS5pdHdoaXRlcGFwZXJzLmNvbS91P2lkPTEyNTU1ODA2MjcuNGJmOTdlZTY3=
+YzQ4M2ExMmY2MGRhYjg5YWI0Yzk5OWImbj1UJmw9aXR3aGl0ZXBhcGVyc2FsZXJ0c19iaSZvPTg=
+5NTg2MDM%3d&x=3D11ee6b9e=
+
+
+FEEDBACK
+To submit feedback about ITwhitepapers' e-mails, contact our online custome=
+r service group at online@itwhitepapers.com. Please include your subscriber=
+ e-mail address in all correspondence.
+
+Read ITwhitepapers' online privacy policy=20=
+http://online.itwhitepapers.com/t/8958603/1255580627/321884/0/=
+
+
+Copyright 2012 | ITwhitepapers | 492 Old Connecticut Path | Framingham MA 0=
+1701 | www.itwhitepapers.com
+
+
+--MIMEBoundary3221aa038a37273ffe1e9775296d4f7f
+Content-Type: text/html;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<p><span style=3D"font-size: 12px;"><span style=3D"font-family: Arial;">Exp=
+lore what businesses are creating in-house and get started building breakth=
+rough apps for your employees. <a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/680624/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3Da21c6699=
+">Learn More&gt;&gt;</a><br />
+</span></span></p>
+<p><a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/167652/0/=
+"><img align=3D"left" src=3D"http://computerworld.com.edgesuite.net/itw/itw=
+_cl_blast_logo.jpg" valign=3D"top" alt=3D"ITwhitepapers" id=3D"imgf2f" /></=
+a></p>
+<p><br />
+&#160;</p>
+<p><br />
+&#160;<font style=3D"font-family: Arial; font-size: 18px;">ITwhitepapers Bu=
+siness Intelligence Alert</font><font id=3D"font10"><font style=3D"font-fam=
+ily: Arial; font-size: 12px;" id=3D"font16">&#160;</font></font></p>
+<p><span style=3D"font-size: 12px;"><span style=3D"font-family: Arial;"><a =
+href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/680624/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3Da21c6699=
+"><b>iPad in Business: Apps in Business</b></a><br />
+<br />
+Please join us at this exclusive on-demand seminar. It'll take about half a=
+n hour and it's absolutely free<br />
+<br />
+Explore the world of business apps for iPad and start transforming the way =
+you work. Discover apps to stay productive in the office or on the go.There=
+ are a world of possibilities with in-house app development for iPad. Explo=
+re what businesses are creating in-house and get started building breakthro=
+ugh apps for your employees. <br />
+<br />
+With apps from the app store or in-house apps, you'll always have the right=
+ information at the right time. You can even learn about different ways on =
+how apps can be distributed in your organization. <br />
+<br />
+There will also be a Q&amp;A segment where viewer solicited questions will =
+be answered by experienced Apple Business Experts.<br />
+<br />
+<a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/680624/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3Da21c6699=
+"><b>Learn More</b></a></span></span><a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/680624/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3Da21c6699=
+"></a></p>
+<br />
+<span style=3D"font-size: 12px;"><span style=3D"font-family: Arial;">
+<div><hr>
+For daily updates follow<b> <a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/576789/0/=
+"><span style=3D"font-size: 12px;"><span style=3D"font-family: Arial;">ITwh=
+itepapers on Twitter</span></span></a></b><hr>
+<br />
+<div style=3D"font-family: Arial; font-size: 12px;">You are subscribed to <=
+em>=
+itwhitepapersalerts_bi=
+</em> as <em>=
+julie.garrett@oracle.com=
+</em>.<br />
+<br />
+Please <a href=3D"=
+http://online.itwhitepapers.com/u?id=3D1255580627.4bf97ee67c483a12f60dab89a=
+b4c999b&n=3DT&l=3Ditwhitepapersalerts_bi&o=3D8958603=
+">click here</a> to unsubscribe from=20=
+itwhitepapersalerts_bi=
+<br />
+Please <a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/661960/0/?3e076d18=3Da=
+nVsaWUuZ2FycmV0dEBvcmFjbGUuY29t&x=3D3cd5ce62=
+" target=3D"_blank" id=3D"alert_unsub_all"><font face=3D"Arial, Helvetica, =
+sans-serif" id=3D"font57">click here</font></a> to unsubscribe from all ITw=
+hitepapers alerts.<br />
+<br />
+<div style=3D"font-family: Arial; font-size: 12px;"><strong>FEEDBACK</stron=
+g><br />
+To submit feedback about ITwhitepapers' e-mails, contact our online custome=
+r service group at <a href=3D"mailto:online@itwhitepapers.com">online@itwhi=
+tepapers.com</a> . <br />
+Please include your subscriber e-mail address in all correspondence.<br />
+&#160;</div>
+Read ITwhitepapers' online <a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/321884/0/=
+" id=3D"a70">privacy policy</a> .<br />
+<br />
+Copyright 2012 | <a href=3D"=
+http://online.itwhitepapers.com/t/8958603/1255580627/167652/0/=
+" id=3D"a76">ITwhitepapers</a> | 492 Old Connecticut Path | Framingham MA 0=
+1701</div>
+</hr></hr></div>
+</span></span>
+=
+<IMG ALT=3D"" SRC=3D"http://online.itwhitepapers.com/db/8958603/1255580627/=
+1.gif" WIDTH=3D1 HEIGHT=3D1>=
+</body>
+</html>
+
+--MIMEBoundary3221aa038a37273ffe1e9775296d4f7f--
+

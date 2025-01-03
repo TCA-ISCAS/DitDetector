@@ -1,0 +1,893 @@
+<!-- ----------------------------------
+		
+OUTSIDE IN VIEWER TECHNOLOGY
+HTML SAMPLE DOCUMENT
+
+-------------------------------------->
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Outside In Viewer Technology Test Document</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#EFEBCE" 
+TEXT="BLACK"
+LINK="#A62A2A"
+ALINK="#4A766E"
+VLINK="#215E21">
+
+<FONT FACE="Verdana, Arial, Comic Sans MS, Helv, Helvetica">
+
+<CENTER>
+<font size=5>Welcome to the<BR>
+<IMG SRC="oivt.jpg"><BR>
+HTML Test Document
+</CENTER>
+
+<p>
+
+<em>
+<font size=2>This document demonstrates some of the features of HTML that are supported
+by Outside In Viewer Technology.
+</em>
+
+<p>
+
+<h2><a name="Index">Index</a></h2>
+<ol type=1>
+<li><a href="#LogicalStyles">Logical Styles</a>
+    <ol type=a>
+    <li><a href="#LogicalStyles-ADDRESS">ADDRESS: Multiline address information</a>
+    <li><a href="#LogicalStyles-BLOCKQUOTE">BLOCKQUOTE: Multiline quotation  </a>
+    <li><a href="#LogicalStyles-CITE">   CITE: Citation                      </a>
+    <li><a href="#LogicalStyles-CODE">   CODE: Code example                  </a>
+    <li><a href="#LogicalStyles-DEL">    DEL: Delete revision                </a>
+    <li><a href="#LogicalStyles-DFN">    DFN: Term definition                </a>
+    <li><a href="#LogicalStyles-EM">     EM: Typographic emphasis            </a>
+    <li><a href="#LogicalStyles-INS">    INS: Add revision                   </a>
+    <li><a href="#LogicalStyles-KBD">    KBD: User-entered text              </a>
+    <li><a href="#LogicalStyles-Q">      Q: Short quotation                  </a>
+    <li><a href="#LogicalStyles-SAMP">   SAMP: Sample text                   </a>
+    <li><a href="#LogicalStyles-STRONG"> STRONG: Strong typographic emphasis </a>
+    <li><a href="#LogicalStyles-VAR">    VAR: Variable name                  </a>
+    </ol>
+
+<li><a href="#PhysicalStyles">Physical Styles</a>
+    <ol type=a>
+    <li><a href="#PhysicalStyles-B">     B: Boldface                         </a>
+    <li><a href="#PhysicalStyles-BASEFONT">BASEFONT: Default Font            </a>
+    <li><a href="#PhysicalStyles-BIG">   BIG: Large print                    </a>
+    <li><a href="#PhysicalStyles-I">     I: Italic                           </a>
+    <li><a href="#PhysicalStyles-S">     S: Strikethrough                    </a>
+    <li><a href="#PhysicalStyles-SMALL"> SMALL: Small print                  </a>
+    <li><a href="#PhysicalStyles-SUB">   SUB: Subscript                      </a>
+    <li><a href="#PhysicalStyles-SUP">   SUP: Superscript                    </a>
+    <li><a href="#PhysicalStyles-TT">    TT: Teletype (monospace font)       </a>
+    <li><a href="#PhysicalStyles-U">     U: Underlined                       </a>
+    </ol>
+
+<li><a href="#InformationElements">Information Type Elements</a>
+    <ol type=a>
+    <li><a href="#InformationElements-AU">      AU: Author name              </a>
+    <li><a href="#InformationElements-PERSON">  PERSON: Person name          </a>
+    <li><a href="#InformationElements-ACRONYM"> ACRONYM: Acronym             </a>
+    <li><a href="#InformationElements-ABBREV">  ABBREV: Abbreviation         </a>
+    </ol>
+
+<li><a href="#Lists">Lists</a>
+    <ol type=a>
+    <li><a href="#Lists-UL">UL: Unordered list                               </a>
+    <li><a href="#Lists-OL">OL: Ordered list                                 </a>
+    <li><a href="#Lists-DL">DL: Definition list                              </a>
+    </ol>
+
+<li><a href="#Tables">Tables</a>
+
+<li><a href="#Entities">Entities</a>
+
+<li><a href="#Rules">Horizontal Rules</a>
+
+</ol>
+
+<h2><a href="welcome.doc#SampleFiles">Return to WELCOME.DOC</a></h2>
+
+<!-- ------------------------------------------------------------ -->
+
+<hr>
+
+<h2><a name="LogicalStyles">Logical Text Styles</a></h2>
+The HTML Specification does not explicitly define how Logical Styles
+should be displayed, it is generally left to the implementor of the viewer. 
+Graphical browsers tend to follow the standard demonstrated below.
+
+<h4><a name="LogicalStyles-ADDRESS">ADDRESS: Multiline address information</a></h4>
+The <code>&lt;ADDRESS&gt;</code> tag is typically used around an author's name and
+internet address information. Text in an address tag is usually set off from the body
+of the document and displayed in italics:
+<address>
+George Washington<br>
+george@whitehouse.gov
+</address>
+
+<h4><a name="LogicalStyles-BLOCKQUOTE">BLOCKQUOTE: Multiline quotation</a></h4>
+The <code>&lt;BLOCKQUOTE&gt;</code> tag defines a block of text to be seperated and
+rendered as quoted text.
+<blockquote>
+This is a blockquote. It is typically used in place of the &lt;Q&gt; (quote) tag around
+multiline quotations. It is usually displayed indented and occasionally in an italic font.
+</blockquote>
+
+<h4><a name="LogicalStyles-CITE">CITE: Citation</a></h4>
+The <code>&lt;CITE&gt;</code> tag is used around a citation to make it stand out from
+regular text. <cite>This is a citation</cite>.
+ 
+<h4><a name="LogicalStyles-CODE">CODE: Code example</a></h4>
+The <code>&lt;CODE&gt;</code> tag is used to offset programming code samples from the 
+rest of document. They are typically displayed in a monospace font:<br>
+<code>
+This is a code sample.<br>
+	&lt;FONT size=1&gt;<br>
+	&lt;HR&gt;<br>
+	&lt;HR size=4&gt;<br>
+	&lt;FONT size=3&gt;<br>
+</code>
+
+<h4><a name="LogicalStyles-DEL">DEL: Delete revision</a></h4>
+The <code>&lt;DEL&gt;</code> tag is used around revision text that has been deleted. How
+this text is displayed and whether it is displayed is dependant on the viewer.
+Typically, delete-revision text will not normally display, but a mode may be
+available to display it in a different color or font, or as strikeout text.
+<del>This is deleted text</del>
+
+<h4><a name="LogicalStyles-DFN">DFN: Term definition</a></h4>
+The <code>&lt;DFN&gt;</code> tag is used around the definition of a term. <DFN>This is
+a term definition</DFN>
+
+<h4><a name="LogicalStyles-EM">EM: Typographic emphasis</a></h4>
+The <code>&lt;EM&gt;</code> tag is used to impart emphasis, and is typically displayed in
+italics. <em>This is emphasized text</em>.
+
+<h4><a name="LogicalStyles-INS">INS: Add revision</a></h4>
+The <code>&lt;INS&gt;</code> tag is used around revision text that has been added. How
+this text is displayed is dependant on the viewer. Typically, a mode will
+be available to display added text in a different color or font than normal
+text. <ins>This is added text</ins>
+
+<h4><a name="LogicalStyles-KBD">KBD: User-entered text</a></h4>
+The <code>&lt;KBD&gt;</code> tag indicates text typed by the user, for instance in an
+instruction manual. <KBD>This is user-entered text</KBD>.
+
+<h4><a name="LogicalStyles-Q">Q: Short quotation</a></h4>
+The <code>&lt;Q&gt;</code> tag is used around short quotations. The text is typically
+enclosed in quotation marks appropriate to the current language. <q>This
+is a short quotation</q>
+
+<h4><a name="LogicalStyles-SAMP">SAMP: Sample text</a></h4>
+The <code>&lt;SAMP&gt;</code> tag is used to indicate a sequence of literal characters.
+<samp>This is sample text</samp>.
+
+<h4><a name="LogicalStyles-STRONG">STRONG: Strong typographic emphasis</a></h4>
+The <code>&lt;STRONG&gt;</code> tag is used to impart strong emphasis, and is typically
+displayed in bold. <strong>This is strongly emphasized text</strong>.
+
+<h4><a name="LogicalStyles-VAR">VAR: Variable name</a></h4>
+The <code>&lt;VAR&gt;</code> tag is used to indicate a variable name, for instance in an
+instruction manual. <VAR>This is a variable name</VAR>.
+
+<p>
+
+<em><a href="#Index">Return to index</a></em>
+
+<!-- ------------------------------------------------------------ -->
+
+<hr>
+
+<h2><a name="PhysicalStyles">Physical Text Styles</a></h2>
+Physical styles are used when the HTML author wants to explicitly specify
+the font used for a section of text. These are not always supported on
+text-based systems, and should therefore be used sparingly.
+
+<h4><a name="PhysicalStyles-B">B: Boldface</a></h4>
+<b>This is a sample of boldface text</b>
+
+<h4><a name="PhysicalStyles-BASEFONT">BASEFONT: Default font</a></h4>
+The <code>&lt;BASEFONT&gt;</code> tag is used to specify the default font
+that will be used in a document.
+
+<h4><a name="PhysicalStyles-BIG">BIG: Large print</a></h4>
+The &lt;BIG&gt; tag causes the current font to increase in size.
+<big>This is a sample of big text</big>
+
+<h4><a name="PhysicalStyles-I">I: Italic</a></h4>
+<i>This is a sample of italic text</i>
+
+<h4><a name="PhysicalStyles-S">S or STRIKE: Strikethrough</a></h4>
+<s>This is a sample of strikethrough text</s>
+
+<h4><a name="PhysicalStyles-SMALL">SMALL: Small print</a></h4>
+The &lt;SMALL&gt; tag causes the current font to decrease in size.
+<small>This is a sample of small text</small>
+
+<h4><a name="PhysicalStyles-SUB">SUB: Subscript</a></h4>
+The &lt;SUB&gt; tag causes the font to reduce in size and the baseline
+to fall. 
+<sub>This is a sample of subscript text</sub>
+
+<h4><a name="PhysicalStyles-SUP">SUP: Superscript</a></h4>
+The &lt;SUP&gt; tag causes the font to reduce in size and the baseline
+to rise. 
+<sup>This is a sample of superscript text</sup>
+
+<h4><a name="PhysicalStyles-TT">TT: Teletype (monospace font)</a></h4>
+<tt>This is a sample of teletype text</tt>
+
+<h4><a name="PhysicalStyles-U">U: Underlined</a></h4>
+<u>This is a sample of underlined text</u>
+
+<p>
+
+<i><a href="#Index">Return to index</a></i>
+
+
+<!-- ----------------------------------------------------------- -->
+
+<hr>
+
+<h2><a name="InformationElements">Information Type Elements</a></h2>
+These tags to not affect the appearance of the text, but instead are
+used for easy indexing by search engines. For instance, a large document 
+may have many references to people's names, and tagging these references as
+&lt;PERSON&gt; allows a search engine to find any or all of these names while
+ignoring the rest of the text.
+
+<h4><a name="InformationElements-AU">AU: Author name</a></h4>
+The &lt;AU&gt; tag indicates the name of an author: <au>Charles Dickens</au>
+
+<h4><a name="InformationElements-PERSON">PERSON: Person name</a></h4>
+The &lt;PERSON&gt; tag indicates any person's name: <person>Albert Einstein</person>
+
+<h4><a name="InformationElements-ACRONYM">ACRONYM: Acronym</a></h4>
+The &lt;ACRONYM&gt; tag is used around an acronym: <acronym>QVP</acronym>
+
+<h4><a name="InformationElements-ABBREV">ABBREV: Abbreviation</a></h4>
+The &lt;ABBREV&gt; tag is used around an abbreviation: <abbrev>Dr.</abbrev>
+
+<p>
+<i><a href="#Index">Return to index</a></i>
+
+<!-- -------------------------------------------------------------->
+
+<hr>
+<h2><a name="Lists">Lists</a></h2>
+
+<h4><a name="Lists-UL">UL: Unordered list</a></h4>
+An unordered list is a non-sequenced list of items that may or may not
+have bullets.
+<p>
+
+Using the <code>plain</code> attribute to UL creates an unordered list without
+bullets:
+<ul plain>
+<li>Apples
+<li>Oranges
+<li>Pears
+</ul>
+<p>
+
+Without the <code>plain</code> attribute, the list typically uses standard round filled bullets:
+<ul>
+<li>Apples
+<li>Oranges
+<li>Pears
+</ul>
+<p>
+
+The character used for the bullet may be selected by specifying the <code>dingbat</code>
+attribute to UL. The list below uses the copyright symbol (&amp;copy;) as a bullet:
+<ul dingbat=&copy;>
+<li>Apples
+<li>Oranges
+<li>Pears
+</ul>
+
+Finally, the <code>compact</code> attribute to UL indicates that the viewer should compress the
+display of the list to use less area:
+<ul compact>
+<li>Apples
+<li>Oranges
+<li>Pears
+</ul>
+
+Finally, the <code>type</code> attribute may be used to specify one of three preset
+bullet types: disc, circle or square.<br>
+
+This list uses the 'disc' bullet:
+<ul type=disc compact>
+<li>First List Item 
+<li>Second List Item
+</ul>
+<p>
+
+This list uses the 'circle' bullet:
+<ul type=circle compact>
+<li>First List Item 
+<li>Second List Item
+</ul>
+<p>
+
+This list uses the 'square' bullet:
+<ul type=square compact>
+<li>First List Item 
+<li>Second List Item
+</ul>
+<p>
+
+<p>
+This is an unordered list that defaults to disc bullets, with some list items specifying
+bullet types:
+<ul type=disc compact>
+<li>Disc bullet
+<li type=square>Square bullet
+<li type=circle>Circle bullet
+<li type=disc>Disc bullet
+<li type=circle>Circle bullet
+<li type=disc>Disc bullet
+<li type=square>Square bullet
+</ul>
+<p>
+
+
+<h4><a name="Lists-OL">OL: Ordered list</a></h4>
+An ordered list is a numbered list of items. The numbers may be in one of several
+formats, including standard (arabic), roman and alphabetical.
+<p>
+The standard ordered list uses arabic numbers, and may or may not have a header using
+the &lt;lh&gt; tag:
+<ol>
+<lh>This is the list header
+<li>This is item 1
+<li>This is item 2
+<li>This is item 3
+</ol>
+<p>
+
+The <code>continue</code> attribute to OL specifies that the list should begin numbering where the
+last list left off:
+<ol continue>
+<li>This is item 4
+<li>This is item 5
+<li>This is item 6
+</ol>
+<p>
+
+The <code>start</code> (or <code>seqnum</code>) attribute to OL specifies the starting number for the list. This
+list starts at 5:
+<ol seqnum=5>
+<li>This is item 5
+<li>This is item 6
+<li>This is item 7
+</ol>
+<p>
+
+The <code>compact</code> attribute to OL indicates that the viewer should compress the
+display of the list to use less area:
+<ol compact>
+<li>This is item 1
+<li>This is item 2
+<li>This is item 3
+</ol>
+<p>
+
+HTML supports five different numbering types: Numbers, capital letters,
+lowercase letters, uppercase roman numerals, and lowercase roman numerals:<br>
+This list uses numbers:
+<ol type=1 compact>
+<li>List Item '1'
+<li>List Item '2'
+</ol>
+<p>
+
+<ol type=A compact>
+<li>List Item 'A'
+<li>List Item 'B'
+</ol>
+<p>
+
+<ol type=a compact>
+<li>List Item 'a'
+<li>List Item 'b'
+</ol>
+<p>
+
+<ol type=I compact>
+<li>List Item 'I'
+<li>List Item 'II'
+</ol>
+<p>
+
+<ol type=i compact>
+<li>List Item 'i'
+<li>List Item 'ii'
+</ol>
+<p>
+
+The numbering state may also be set for each individual list item. The list below
+has a type of 'A' (uppercase alphabetical), with some list items specifying values 
+and types:
+<ol type=A compact>
+<li>List item 'A'
+<li value=4 type=I>List item 'IV'
+<li value=10 type=1>List item '10'
+<li value=7 type=i>List item 'vii'
+<li value=26 type=a>List item 'z'
+<li>List item 'AA'
+<li value=1 type=1>List item '1'
+<li>List item 'B'
+</ol>
+
+
+<h4><a name="Lists-DL">DL: Definition list</a></h4>
+A definition list is a list of terms and their definitions. They may be either normal
+or compact (specified with the <code>compact</code> attribute to DL):
+<dl>
+<dt>Term A
+<dd>Definition for Term A
+<dt>Term B
+<dd>Definition for Term B
+<dt>Term C
+<dd>Definition for Term C
+</dl>
+<p>
+<dl compact>
+<dt>Term A
+<dd>Definition for Term A (This is a compact list)
+<dt>Term B
+<dd>Definition for Term B
+<dt>Term C
+<dd>Definition for Term C
+</dl>
+
+<p>
+<i><a href="#Index">Return to index</a></i>
+
+<!-- -------------------------------------------------------------->
+
+<hr>
+<h2><a name="Tables">Tables</a></h2>
+Tables have many options in the HTML 3.0 spec, including optional captions and borders,
+cell spanning both horizontally and vertically, and fixed column widths. Following
+is a simple right-aligned table demonstrating borders, a caption, and cell spanning. Because no
+cell widths are specified, the size of each cell in the table will be automatically
+determined by the viewer:
+<TABLE BORDER ALIGN=RIGHT>
+  <CAPTION>A test table with merged cells</CAPTION>
+  <TR><TH ROWSPAN=2><TH COLSPAN=2>Average
+      <TH ROWSPAN=2>other<BR>category<TH>Misc
+  <TR><TH>height<TH>weight
+  <TR><TH ALIGN=LEFT>males<TD>1.9<TD>0.003<TD>A<TD>BCD
+  <TR><TH ALIGN=LEFT>females<TD>1.7<TD>0.002<TD>1<TD>234
+</TABLE>
+
+<p>
+<i><a href="#Index">Return to index</a></i>
+
+<!-- -------------------------------------------------------------->
+
+
+<hr>
+<h2><a name="Entities">Entities</a></h2>
+The HTML component of Outside In Viewer Technology supports 
+over 300 character entities, as defined by HTML 3.0 and ISO8859. These
+characters will display correctly in Outside In Viewer Technology 
+on any computer, provided there is a typeface available that contains 
+the character.
+<p>
+
+<pre>
+<b>UPPERCASE LIGATURES</b>
+<b>Description                 Entity     Char</b>
+AE ligature                 &amp;AElig;    &AElig;    
+AE ligature                 &amp;Aelig;    &Aelig;    
+A acute accent              &amp;Aacute;   &Aacute;   
+A circumflex accent         &amp;Acirc;    &Acirc;    
+A grave accent              &amp;Agrave;   &Agrave;   
+A ring                      &amp;Aring;    &Aring;    
+A tilde                     &amp;Atilde;   &Atilde;   
+A umlaut                    &amp;Auml;     &Auml;     
+C cedilla                   &amp;Ccedil;   &Ccedil;   
+E acute accent              &amp;Eacute;   &Eacute;   
+E circumflex accent         &amp;Ecirc;    &Ecirc;    
+E grave accent              &amp;Egrave;   &Egrave;   
+E umlaut                    &amp;Euml;     &Euml;     
+I acute accent              &amp;Iacute;   &Iacute;   
+I circumflex accent         &amp;Icirc;    &Icirc;    
+I grave accent              &amp;Igrave;   &Igrave;   
+I umlaut                    &amp;Iuml;     &Iuml;     
+N tilde                     &amp;Ntilde;   &Ntilde;   
+O acute accent              &amp;Oacute;   &Oacute;   
+O circumflex accent         &amp;Ocirc;    &Ocirc;    
+O grave accent              &amp;Ograve;   &Ograve;   
+O slash                     &amp;Oslash;   &Oslash;   
+O tilde                     &amp;Otilde;   &Otilde;   
+O umlaut                    &amp;Ouml;     &Ouml;     
+U acute accent              &amp;Uacute;   &Uacute;   
+U circumflex accent         &amp;Ucirc;    &Ucirc;    
+U grave accent              &amp;Ugrave;   &Ugrave;   
+U umlaut                    &amp;Uuml;     &Uuml;     
+Y acute accent              &amp;Yacute;   &Yacute;   
+D-stroke                    &amp;Dstrok;   &Dstrok;   
+Icelandic ETH               &amp;ETH;      &ETH;      
+Icelandic THORN             &amp;THORN;    &THORN;    
+
+<b>LOWERCASE LIGATURES</b>
+<b>Description                 Entity     Char</b>
+ae ligature                 &amp;aelig;    &aelig;    
+a acute accent              &amp;aacute;   &aacute;   
+a circumflex accent         &amp;acirc;    &acirc;    
+a grave accent              &amp;agrave;   &agrave;   
+a ring                      &amp;aring;    &aring;    
+a tilde                     &amp;atilde;   &atilde;   
+a umlaut                    &amp;auml;     &auml;     
+c cedilla                   &amp;ccedil;   &ccedil;   
+e acute accent              &amp;eacute;   &eacute;   
+e circumflex accent         &amp;ecirc;    &ecirc;    
+e grave accent              &amp;egrave;   &egrave;   
+e umlaut                    &amp;euml;     &euml;     
+i acute accent              &amp;iacute;   &iacute;   
+i circumflex accent         &amp;icirc;    &icirc;    
+i grave accent              &amp;igrave;   &igrave;   
+i umlaut                    &amp;iuml;     &iuml;     
+n tilde                     &amp;ntilde;   &ntilde;   
+o acute accent              &amp;oacute;   &oacute;   
+o circumflex accent         &amp;ocirc;    &ocirc;    
+o grave accent              &amp;ograve;   &ograve;   
+o slash                     &amp;oslash;   &oslash;   
+o tilde                     &amp;otilde;   &otilde;   
+o umlaut                    &amp;ouml;     &ouml;     
+u acute accent              &amp;uacute;   &uacute;   
+u circumflex accent         &amp;ucirc;    &ucirc;    
+u grave accent              &amp;ugrave;   &ugrave;   
+u umlaut                    &amp;uuml;     &uuml;     
+y acute accent              &amp;yacute;   &yacute;   
+y umlaut                    &amp;yuml;     &yuml;     
+sz ligature                 &amp;szlig;    &szlig;    
+Icelandic eth               &amp;eth;      &eth;      
+icelandic thorn             &amp;thorn;    &thorn;    
+
+<b>UPPERCASE GREEK</b>
+<b>Description                 Entity     Char</b>
+Alpha                       &amp;Alpha;    &Alpha;    
+Beta                        &amp;Beta;     &Beta;     
+Gamma                       &amp;Gamma;    &Gamma;    
+Delta                       &amp;Delta;    &Delta;    
+Epsilon                     &amp;Epsi;     &Epsi;     
+                            &amp;Epsilon;  &Epsilon;  
+Zeta                        &amp;Zeta;     &Zeta;     
+Eta                         &amp;Eta;      &Eta;      
+Theta                       &amp;Theta;    &Theta;    
+Iota                        &amp;Iota;     &Iota;     
+Kappa                       &amp;Kappa;    &Kappa;    
+Lambda                      &amp;Lambda;   &Lambda;   
+Mu                          &amp;Mu;       &Mu;       
+Nu                          &amp;Nu;       &Nu;       
+Xi                          &amp;Xi;       &Xi;       
+Omicron                     &amp;Omicron;  &Omicron;  
+Pi                          &amp;Pi;       &Pi;       
+Rho                         &amp;Rho;      &Rho;      
+Tau                         &amp;Tau;      &Tau;      
+Sigma                       &amp;Sigma;    &Sigma;    
+Upsilon                     &amp;Upsi;     &Upsi;     
+                            &amp;Upsilon;  &Upsilon;  
+Phi                         &amp;Phi;      &Phi;      
+Chi                         &amp;Chi;      &Chi;      
+Psi                         &amp;Psi;      &Psi;      
+Omega                       &amp;Omega;    &Omega;    
+Ohm symbol (Omega)          &amp;ohm;      &ohm;      
+
+<b>LOWERCASE GREEK</b>
+<b>Description                 Entity     Char</b>
+alpha                       &amp;alpha;    &alpha;    
+beta                        &amp;beta;     &beta;     
+gamma                       &amp;gamma;    &gamma;    
+delta                       &amp;delta;    &delta;    
+epsilon                     &amp;epsi;     &epsi;     
+                            &amp;epsilon;  &epsilon;  
+zeta                        &amp;zeta;     &zeta;     
+eta                         &amp;eta;      &eta;      
+theta                       &amp;theta;    &theta;    
+iota                        &amp;iota;     &iota;     
+kappa                       &amp;kappa;    &kappa;    
+lambda                      &amp;lambda;   &lambda;   
+mu                          &amp;mu;       &mu;       
+micro symbol (mu)           &amp;micro;    &micro;    
+nu                          &amp;nu;       &nu;       
+xi                          &amp;xi;       &xi;       
+omicron                     &amp;omicron;  &omicron;  
+pi                          &amp;pi;       &pi;       
+rho                         &amp;rho;      &rho;      
+tau                         &amp;tau;      &tau;      
+sigma                       &amp;sigma;    &sigma;    
+upsilon                     &amp;upsi;     &upsi;     
+                            &amp;upsilon;  &upsilon;  
+phi                         &amp;phi;      &phi;      
+chi                         &amp;chi;      &chi;      
+psi                         &amp;psi;      &psi;      
+omega                       &amp;omega;    &omega;    
+
+<b>GREEK VARIANTS</b>
+<b>Description                 Entity     Char</b>
+small script phi            &amp;phiv;     &phiv;     
+                            &amp;varphi;   &varphi;   
+small omega pi              &amp;piv;      &piv;      
+                            &amp;varpi;    &varpi;    
+small final sigma           &amp;sigmav;   &sigmav;   
+                            &amp;vsigma;   &vsigma;   
+small script theta          &amp;vtheta;   &vtheta;   
+                            &amp;thetav;   &thetav;   
+
+<b>MATHEMATICAL SYMBOLS</b>
+<b>Description                 Entity     Char</b>
+logical AND                 &amp;and;      &and;      
+logical NOT                 &amp;not;      &not;      
+logical OR                  &amp;or;       &or;       
+circled plus symbol         &amp;oplus;    &oplus;    
+circiled times symbol       &amp;otimes;   &otimes;   
+set intersection            &amp;cap;      &cap;      
+set union                   &amp;cup;      &cup;      
+is an element of            &amp;isin;     &isin;     
+is not an element of        &amp;notin;    &notin;    
+contains as a member        &amp;ni;       &ni;       
+proper subset of            &amp;sub;      &sub;      
+subset of or equal to       &amp;sube;     &sube;     
+not a subset of             &amp;nsub;     &nsub;     
+proper superset of          &amp;sup;      &sup;      
+superset of or equal to     &amp;supe;     &supe;     
+empty set                   &amp;empty;    &empty;    
+equals symbol               &amp;equals;   &equals;   
+not equal to                &amp;ne;       &ne;       
+identical-to                &amp;equiv;    &equiv;    
+similar sign (tilde)        &amp;sim;      &sim;      
+proportional to             &amp;prop;     &prop;     
+approximately equal to      &amp;ap;       &ap;       
+                            &amp;ape;      &ape;      
+greater than or equal to    &amp;ge;       &ge;       
+greater than symbol         &amp;gt;       &gt;       
+less than or equal to       &amp;le;       &le;       
+less than symbol            &amp;lt;       &lt;       
+angle                       &amp;ang;      &ang;      
+function of (script f)      &amp;fnof;     &fnof;     
+there exists                &amp;exist;    &exist;    
+for all                     &amp;forall;   &forall;   
+imaginary number            &amp;image;    &image;    
+real number                 &amp;real;     &real;     
+therefore                   &amp;there4;   &there4;   
+infinity                    &amp;inf;      &inf;      
+                            &amp;infin;    &infin;    
+perpendicular               &amp;perp;     &perp;     
+dot operator                &amp;sdot;     &sdot;     
+multiplication symbol       &amp;times;    &times;    
+divide symbol               &amp;divide;   &divide;   
+minus sign                  &amp;minus;    &minus;    
+plus symbol                 &amp;plus;     &plus;     
+plus/minus symbol           &amp;plusmn;   &plusmn;   
+radical square root         &amp;radic;    &radic;    
+n-ary summation sign        &amp;sum;      &sum;      
+n-ary product sign          &amp;prod;     &prod;     
+first transfinite cardinal  &amp;aleph;    &aleph;    
+integral symbol             &amp;int;      &int;      
+partial differential        &amp;part;     &part;     
+                            &amp;pd;       &pd;       
+weierstrass p               &amp;weierp;   &weierp;   
+
+<b>ARROWS AND BRACKETS</b>
+<b>Description                 Entity     Char</b>
+left pointing arrow         &amp;larr;     &larr;     
+right pointing arrow        &amp;rarr;     &rarr;     
+up pointing arrow           &amp;uarr;     &uarr;     
+downward arrow              &amp;darr;     &darr;     
+left-right arrow            &amp;harr;     &harr;     
+left double arrow           &amp;lArr;     &lArr;     
+right double arrow          &amp;rArr;     &rArr;     
+up double arrow             &amp;uArr;     &uArr;     
+down double arrow           &amp;dArr;     &dArr;     
+left-right double arrow     &amp;hArr;     &hArr;     
+left angle bracket          &amp;lang;     &lang;     
+right angle bracket         &amp;rang;     &rang;     
+left bracket top            &amp;lceil;    &lceil;    
+Left bracket bottom         &amp;lfloor;   &lfloor;   
+right bracket top           &amp;rceil;    &rceil;    
+right bracket bottom        &amp;rfloor;   &rfloor;   
+left curly bracket          &amp;lcub;     &lcub;     
+right curly bracket         &amp;rcub;     &rcub;     
+left determinant vert bar   &amp;ldet;     &ldet;     
+right determinant vert bar  &amp;rdet;     &rdet;     
+left parenthesis            &amp;lpar;     &lpar;     
+right parenthesis           &amp;rpar;     &rpar;     
+left square bracket         &amp;lsqb;     &lsqb;     
+right square bracket        &amp;rsqb;     &rsqb;     
+
+
+<b>ACCENTS</b>
+<b>Description                 Entity     Char</b>
+acute accent                &amp;acute;    &acute;    
+spacing breve (short) accent&amp;breve;    &breve;    
+spacing caron accent        &amp;caron;    &caron;    
+cedilla                     &amp;cedil;    &cedil;    
+circumflex accent           &amp;circ;     &circ;     
+dieresis                    &amp;die;      &die;      
+spacing dot above accent    &amp;dot;      &dot;      
+grave accent                &amp;grave;    &grave;    
+ring                        &amp;ring;     &ring;     
+tilde                       &amp;tilde;    &tilde;    
+umlaut                      &amp;uml;      &uml;      
+double acute accent         &amp;dblac;    &dblac;    
+spacing ogonek accent       &amp;ogon;     &ogon;     
+
+<b>PUNCTUATION</b>
+<b>Description                 Entity     Char</b>
+period                      &amp;period;   &period;   
+comma                       &amp;comma;    &comma;    
+question mark               &amp;quest;    &quest;    
+inverted question mark      &amp;iquest;   &iquest;   
+exclamation point           &amp;excl;     &excl;     
+inverted exclamation point  &amp;iexcl;    &iexcl;    
+quotation mark              &amp;quot;     &quot;     
+left single quote           &amp;lsquo;    &lsquo;    
+right single quote          &amp;rsquo;    &rsquo;    
+left double quote           &amp;ldquo;    &ldquo;    
+right double quote          &amp;rdquo;    &rdquo;    
+left angle quote            &amp;laquo;    &laquo;    
+right angle quote           &amp;raquo;    &raquo;    
+ampersand                   &amp;amp;      &amp;      
+apostrophe                  &amp;apos;     &apos;     
+asterisk                    &amp;ast;      &ast;      
+colon                       &amp;colon;    &colon;    
+semicolon                   &amp;semi;     &semi;     
+hyphen                      &amp;hyphen;   &hyphen;   
+paragraph symbol            &amp;para;     &para;     
+section symbol              &amp;sect;     &sect;     
+
+<b>DASHES, SPACES, AND BARS</b>
+<b>Description                 Entity     Char</b>
+break bar                   &amp;brkbar;   &brkbar;   
+vertical bar                &amp;brvbar;   &brvbar;   
+raised bar                  &amp;hibar;    &hibar;    
+horizontal bar              &amp;horbar;   &horbar;   
+low line                    &amp;lowbar;   &lowbar;   
+vertical bar                &amp;verbar;   &verbar;   
+centered horizontal ellipsis&amp;cdots;    &cdots;    
+horizontal ellipsis         &amp;hellip;   &hellip;   
+low horizontal ellipsis     &amp;ldots;    &ldots;    
+diagonal ellipsis           &amp;ddots;    &ddots;    
+                            &amp;dellip;   &dellip;   
+vertical ellipsis           &amp;vdots;    &vdots;    
+vertical ellipsis           &amp;vellip;   &vellip;   
+m-width dash                &amp;emdash;   &emdash;   
+                            &amp;mdash;    &mdash;    
+n-width dash                &amp;endash;   &endash;   
+                            &amp;ndash;    &ndash;    
+m-width space               &amp;emsp;     &emsp;     
+n-width space               &amp;ensp;     &ensp;     
+hair-width space            &amp;hairsp;   &hairsp;   
+non-breaking space          &amp;nbsp;     &nbsp;     
+quad em space               &amp;quad;     &quad;     
+medium space                &amp;sp;       &sp;       
+Thin space (1/6 em space)   &amp;thinsp;   &thinsp;   
+
+<b>MISCELLANEOUS</b>
+<b>Description                 Entity     Char</b>
+diamonds playing card suit  &amp;diams;    &diams;    
+clubs playing card suit     &amp;clubs;    &clubs;    
+hearts playing card suit    &amp;hearts;   &hearts;   
+spades playing card suit    &amp;spades;   &spades;   
+cent symbol                 &amp;cent;     &cent;     
+dollar symbol               &amp;dollar;   &dollar;   
+british pound symbol        &amp;pound;    &pound;    
+japanese yen symbol         &amp;yen;      &yen;      
+universal currency symbol   &amp;curren;   &curren;   
+seconds mark                &amp;Prime;    &Prime;    
+minute mark                 &amp;prime;    &prime;    
+degrees symbol              &amp;deg;      &deg;      
+number symbol               &amp;num;      &num;      
+ordinal indicator, feminine &amp;ordf;     &ordf;     
+ordinal indicator, masculine&amp;ordm;     &ordm;     
+lozenge, total mark         &amp;loz;      &loz;      
+macron                      &amp;macr;     &macr;     
+del op., gradient, nabla    &amp;nabla;    &nabla;    
+percent symbol              &amp;percnt;   &percnt;   
+music note (sung text sign) &amp;sung;     &sung;     
+middle-height dot           &amp;middot;   &middot;   
+round filled bullet         &amp;bull;     &bull;     
+solidus (slash)             &amp;sol;      &sol;      
+reverse solidus (backslash) &amp;bsol;     &bsol;     
+commercial at sign          &amp;commat;   &commat;   
+copyright symbol            &amp;copy;     &copy;     
+registered symbol           &amp;reg;      &reg;      
+trademark symbol            &amp;trade;    &trade;    
+1/2 fraction                &amp;frac12;   &frac12;   
+1/4 fraction                &amp;frac14;   &frac14;   
+1/8 fraction                &amp;frac18;   &frac18;   
+3/4 fraction                &amp;frac34;   &frac34;   
+3/8 fraction                &amp;frac38;   &frac38;   
+5/8 fraction                &amp;frac58;   &frac58;   
+7/8 fraction                &amp;frac78;   &frac78;   
+1/2 fraction                &amp;half;     &half;     
+superscripted '1'           &amp;sup1;     &sup1;     
+superscripted '2'           &amp;sup2;     &sup2;     
+superscripted '3'           &amp;sup3;     &sup3;     
+</pre>
+
+<p>
+<i><a href="#Index">Return to index</a></i>
+
+<!-- -------------------------------------------------------------->
+
+
+<hr>
+<h2><a name="Rules">Horizontal Rules</a></h2>
+
+HTML supports horizontal rules with height, width and shading attributes:
+
+<strong>&lt;HR SIZE=number&gt;</strong><br>
+Specifies how thick the horizontal rule should be.<br>
+This rule has a size of 0:
+<hr size=0>
+This rule has a size of 5:
+<hr size=5>
+This rule has a size of 10:
+<hr size=10>
+This rule has a size of 15:
+<hr size=15>
+This rule has an unspecified size:
+<hr>
+<p>
+
+<strong>&lt;HR WIDTH=number|percent&gt;</strong><br>
+Specifies the width of the horizontal rule either as a constant values or as a 
+percentage of window width.<br>
+This rule has a width of 100:
+<hr width=100>
+This rule has a width of 200:
+<hr width=200>
+This rule has a width of 2000:
+<hr width=2000>
+This rule has a width of 20%:
+<hr width=20%>
+This rule has a width of 60%:
+<hr width=60%>
+This rule has a width of 90%:
+<hr width=90%>
+<p>
+
+<strong>&lt;HR ALIGN=left|center|right&gt;</strong><br>
+Specifies horizontal alignment for rules that aren't as wide as the page. All of the
+rules below have a width of 50%.<br>
+This rule is left aligned:
+<hr width=50% align=left>
+This rule is center aligned:
+<hr width=50% align=center>
+This rule is right aligned:
+<hr width=50% align=right>
+This rule has an unspecified alignment:
+<hr width=50%>
+<p>
+
+<strong>&lt;HR NOSHADE&gt;</strong><br>
+Specifies that the rule should display as a solid color instead of using any shading
+or 3-D effects.<br>
+This rule specifies NOSHADE:
+<hr size=10 NOSHADE>
+This rule does not specify NOSHADE:
+<hr size=10>
+<p>
+
+
+<p>
+<i><a href="#Index">Return to index</a></i>
+
+</BODY>
+
+</HTML>
+

@@ -1,0 +1,73 @@
+==============================================================================
+   How To Build Outside In Technology Sample Applications On UNIX Platforms
+==============================================================================
+
+Included in the sdk/samplecode/unix directory of all Oracle Outside In 
+products that ship on UNIX platforms are a makefile and a shell script which 
+facilitate the building of the various sample applications included with the
+products.  The shell script generates a makefile tailored to the platform on
+which the sample application(s) are being built.
+
+**************
+1 - QUICKSTART
+**************
+Change to the sdk/samplecode/unix directory and type
+
+       make
+
+This should build all the provided sample applications.  If you run into
+difficulties then read on.
+
+
+********************************
+2 - THE _plat MAKEFILE PARAMETER
+********************************
+For several platforms, an extra parameter must be passed to the makefile in
+order to correctly configure the platform-specific makefile to generate the
+correct binary format.  The parameter is _plat, and is defined as follows
+for the relevant platforms:
+
+       ppc64 ----------- necessary to build 64-bit AIX PPC binaries
+       risc64 ---------- necessary to build 64-bit HP-UX PA-RISC binaries 
+       x86-64 ---------- necessary to build 64-bit SunOS x64 binaries 
+       x86-32 ---------- necessary to build 32-bit SunOS x86 binaries
+       sparc64 --------- necessary to build 64-bit SunOS SPARC binaries
+       s390 ------------ necessary to build 31-bit zSeries Linux binaries
+                         (when on a 64-bit zSeries machine ONLY)
+
+So, for example, to build exsimple in a shell on a 64-bit HP-UX PA-RISC 
+machine, type 
+   
+       make exsimple _plat=risc64.
+
+For all sample applications, the binary application file is placed in a
+subdirectory off of the 'unix' subdirectory that is located in the application
+directory.  For example, if exsimple is built on a 32-bit SPARC SunOS 5.8 
+platform, the binary will be placed in
+
+               sdk/samplecode/exsimple/unix/SunOS5.8
+
+
+*******************
+3 - TROUBLESHOOTING
+*******************
+
+PROBLEM:  When I type 'make exsimple', I get the following error:
+
+            /bin/sh: configure: cannot execute - Permission denied
+            make: *** [exsimple] Error 126
+
+SOLUTION:  Make sure the 'configure' script has execute permissions for
+           either the current user, the current user's group, or the world.
+
+---
+
+PROBLEM:  When trying to build exsimple for 64-bit SPARC SunOS, I get the 
+          following error:
+
+            ld: fatal: file ../../demo/libsc_ex.so: wrong ELF class: ELFCLASS64
+            ld: fatal: file ../../demo/libsc_da.so: wrong ELF class: ELFCLASS64
+
+SOLUTION:  Remember to set the _plat variable to sparc64.  Similar errors can 
+           occur when building for other platforms that require the _plat 
+           variable to be set.  See "2 - THE _plat MAKEFILE PARAMETER" above.

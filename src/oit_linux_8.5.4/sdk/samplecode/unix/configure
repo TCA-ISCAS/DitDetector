@@ -1,0 +1,265 @@
+#!/bin/sh
+
+VER="`uname -r`";
+if [ "${BAPP}" = "" ]
+then
+	OS="`uname -s`";
+fi
+
+if [ "${TARGETDIR}" = "" -o ! -d "${TARGETDIR}" ]
+then
+    TARGETDIR="../../demo";
+fi
+
+if [ "${TECHINCLUDE}" = "" -o ! -d "${TECHINCLUDE}" ]
+then
+	if [ ! -d "../../common" ]
+	then
+		echo "Include directory not found. Stop.";
+		exit; 
+	else 
+		TECHINCLUDE="../../common";
+	fi 
+fi
+TECHINCLUDE_FLAG="-I${TECHINCLUDE}";
+
+if [ "${TECHLIB}" = "" -o ! -d "${TECHLIB}" ]
+then
+	if [ ! -d "../../$OS" ]
+	then
+		FOUND_UT="`ls ../../libsc_ut.* 2>/dev/null`";
+		if [ -n "${FOUND_UT}" ]
+		then
+			TECHLIB="../..";
+		else
+			FOUND_UT="`ls ../../../redist/libsc_ut.* 2>/dev/null`";
+			if [ -n "${FOUND_UT}" ]
+			then
+				TECHLIB="../../../redist";
+			else 
+                FOUND_UT="`ls ../../demo/libsc_ut.* 2>/dev/null`";
+                if [ -n "${FOUND_UT}" ]
+                then
+                    TECHLIB="../../demo";
+                else 
+                    echo "Library directory not found. Stop.";
+                    exit;
+                fi
+			fi
+		fi
+	else
+		TECHLIB="../../${OS}";
+	fi
+fi
+TECHLIB_FLAG="-L${TECHLIB}";
+
+echo "Building for OS: ${OS} ${VER}";
+
+if [ "${BAPP}" = "" ]
+then
+	MAKE="make";
+
+	for i in ${TARGETDEPS}; 
+	do
+		if [ "$i" = "-lXm" ]
+		then
+			MAYBE_XLIBS=y;
+		fi
+	done
+
+	case ${OS} in
+		AIX)
+			CC="xlc";
+			LIB="-brtl -Wl,-bmaxdata:0x80000000 -Wl,-bnolibpath -Wl,-blibpath:/usr/lib:lib";
+			if [ "${_plat}" = "ppc64" ];
+			then 
+				CFLAGS_APP="-w -q64 -DUNIX_64";
+			else 
+				CFLAGS_APP="-w -q32";
+			fi
+			;;
+
+		HP-UX)
+			CC="cc";
+			CHIP="`uname -m`";
+			if [ "$CHIP" = "ia64" ]
+			then
+				CFLAGS_APP="${DEBUG} +DD64 -DUNIX_64";
+				if [ "${MAYBE_XLIBS}" = "y" ]
+				then
+					XINCLUDE='-I/usr/include/Motif1.2 -I/usr/include/X11R6';
+					XLIB='-L/usr/lib/Motif1.2_R6 -L/usr/lib/X11R6';
+				fi
+				INCLUDE="${XINCLUDE}";
+				LIB="${XLIB}";
+				RUNPATH="-Wl,+s,+b,'\$\$ORIGIN'";
+			elif [ "${_plat}" = "risc64" ]
+			then
+				CFLAGS_APP="${DEBUG} -w +DD64 -DUNIX -DUNIX_64";
+				LIB='-Wl,+s -L/usr/lib/pa20_64';
+				if [ "${MAYBE_XLIBS}" = "y" ]
+				then
+					XINCLUDE='-I/usr/include/Motif2.1 -I/usr/include/X11R6';
+				fi
+				INCLUDE="${XINCLUDE}";
+				RUNPATH="-Wl,+b,'\$\$ORIGIN'";
+			else
+				CFLAGS_APP="${DEBUG} -w +DAportable -D_HPUX_SOURCE";
+				LIB='-Wl,+s -L/usr/lib';
+				if [ "${MAYBE_XLIBS}" = "y" ]
+				then
+					XINCLUDE='-I/usr/include/Motif2.1 -I/usr/include/X11R6';
+				fi
+				INCLUDE="${XINCLUDE}";
+				RUNPATH="-Wl,+b,'\$\$ORIGIN'";
+			fi
+			;;
+
+		SunOS)
+			CC="cc";
+			CHIP="`uname -p`";
+			if [ "${_plat}" = "x86-64" ]
+			then
+				CFLAGS_APP="${DEBUG} -m64 -w";
+				INCLUDE="-I/usr/include -I/usr/dt/share/include";
+				LIB="-L/usr/lib -L/lib";
+				RUNPATH="-Wl,-R '\$\$ORIGIN'";
+			elif [ "$CHIP" = "i386" -o "${_plat}" = "x86-32" ]
+			then
+				CFLAGS_APP="${DEBUG} -w";
+				INCLUDE="-I/usr/include -I/usr/dt/share/include";
+				LIB="-L/usr/lib -L/lib";
+				RUNPATH="-R '\$\$ORIGIN'";
+			elif [ "${_plat}" = "sparc64" ]
+			then
+				CFLAGS_APP="${DEBUG} -w -DUNIX_64 -DUNIX -xtarget=generic64";
+				INCLUDE="-I/usr/include -I/usr/dt/share/include";
+				LIB="-L/usr/lib -L/lib";
+				RUNPATH="-R '\$\$ORIGIN'";
+			else
+				CFLAGS_APP="${DEBUG} -w";
+				INCLUDE="-I/usr/include -I/usr/dt/share/include";
+				LIB="-L/usr/lib -L/lib";
+				RUNPATH="-R '\$\$ORIGIN'";
+			fi
+			;;
+
+		FreeBSD)
+			CC="gcc";
+			MAKE="gmake";
+			CFLAGS_APP="${DEBUG} -w -DUNIX -D_FREEBSD_SOURCE";
+			if [ "${MAYBE_XLIBS}" = "y" ]
+			then
+				XINCLUDE="-I/usr/X11R6/include";
+				XLIB="-L/usr/X11R6/lib";
+			fi
+			INCLUDE="-I/usr/local/include ${XINCLUDE}";
+			LIB="-L/usr/local/lib ${XLIB} -lm";
+			RUNPATH="-Wl,-rpath-link,${TECHLIB},-rpath,'\$\$ORIGIN'";
+			;;
+		Linux)
+			CC="gcc";
+			CHIP="`uname -m`";
+			if [ "$CHIP" = "ia64" -o "$CHIP" = "x86_64" -o "$CHIP" = "ppc64" ]
+			then
+				CFLAGS_APP="${DEBUG} -m64 -w -D_LINUX64_SOURCE -DUNIX_64";
+				LOCAL_INCLUDE="-I/usr/local/include";
+				LOCAL_LIBS="-L/usr/local/lib";
+			elif [ "$CHIP" = "s390x" ]
+			then
+				if [ "${_plat}" = "s390" ]
+				then
+					CFLAGS_APP="${DEBUG} -m31 -w -D_LINUX_SOURCE";
+					LOCAL_INCLUDE="-I/opt/local/include -I/usr/local/include";
+					LOCAL_LIBS="-L/opt/local/lib -L/usr/local/lib";
+				else
+					CFLAGS_APP="${DEBUG} -m64 -w -D_LINUX64_SOURCE -DUNIX_64";
+					LOCAL_INCLUDE="-I/usr/local/include";
+					LOCAL_LIBS="-L/usr/local/lib";
+				fi;  
+			else
+				CFLAGS_APP="${DEBUG} -w -D_LINUX_SOURCE";
+				LOCAL_INCLUDE="-I/opt/local/include -I/usr/local/include";
+				LOCAL_LIBS="-L/opt/local/lib -L/usr/local/lib";
+			fi
+			if [ "${MAYBE_XLIBS}" = "y" ]
+			then
+				XLIB="-L/usr/X11R6/lib";
+				XINCLUDE="-I/usr/X11R6/include";
+			fi;
+			LIB="${XLIB} ${LOCAL_LIBS} -lm";
+			INCLUDE="${XINCLUDE} ${LOCAL_INCLUDE}";
+			RUNPATH="-Wl,-rpath-link,${TECHLIB},-rpath,'\$\$ORIGIN'";
+			;;
+	esac
+fi
+
+
+if [ "${BUILDDIR}" = "" ]
+then
+	BUILDDIR="../${TARGET}/unix";
+fi
+	
+
+if [ "${TARGET}" = "process_isolate_sample_unix" ]
+then
+	if [ "`uname -s`" = "SunOS" ]
+	then
+		SOCKETDEV="-lsocket -lnsl";
+	fi
+	SOURCEFILE="\
+		${BUILDDIR}/fileconvert.c\
+		${BUILDDIR}/ipc.c\
+		${BUILDDIR}/exporter.c\
+		${BUILDDIR}/processes.c";
+fi
+if [ "${TARGET}" = "batch_process_ca" -o "${TARGET}" = "batch_process_ex" -o "${TARGET}" = "batch_process_hx" -o "${TARGET}" = "batch_process_wv" ]
+then
+
+	INCLUDE="${INCLUDE} -I${BUILDDIR}";
+	if [ "`uname -s`" = "SunOS" ]
+	then
+		SOCKETDEV="-lsocket -lnsl";
+	fi
+        SOURCEFILE="${BUILDDIR}/exporter.c\
+                    ${BUILDDIR}/fileconvert.c\
+                    ${BUILDDIR}/handledir.c\
+                    ${BUILDDIR}/ipc.c\
+                    ${BUILDDIR}/processes.c\
+                    ${BUILDDIR}/redir.c\
+                    ${BUILDDIR}/timing.c";
+fi
+
+APP="$BUILDDIR/${TARGET}";
+mkdir -p $BUILDDIR/$OS$VER;
+
+if [ "${BAPP}" = "" ]
+then
+    MAKEFILENAME="makefile.${OS}${VER}";
+else
+    MAKEFILENAME="makefile.${UNAME_STRING}";
+fi
+
+if [ -f "${MAKEFILENAME}" ]
+then
+	rm -f "${MAKEFILENAME}";
+fi
+touch "${MAKEFILENAME}";
+
+if [ "${TARGET}" = "exportdir" ]
+then
+echo >${MAKEFILENAME} "${TARGET}-${UNAME_STRING}:	${APP}.cpp";
+echo >>${MAKEFILENAME} "	rm -f ${BUILDDIR}/${OS}${VER}/${TARGET} ${TARGETDIR}/${TARGET}";
+echo >>${MAKEFILENAME} "	${CC} -o ${BUILDDIR}/${OS}${VER}/${TARGET} ${APP}.cpp ${SOURCEFILE} ${INCLUDE} ${TECHINCLUDE_FLAG} ${DVERSION} ${CFLAGS_APP} ${APPFLAGS} ${TECHLIB_FLAG} ${LIB} ${TARGETDEPS} -lstdc++ ${SOCKETDEV} ${WIN32VDEP} ${RUNPATH}";
+echo >>${MAKEFILENAME} "	cp -f ${BUILDDIR}/${OS}${VER}/${TARGET} ${TARGETDIR}/${TARGET}";
+echo >>${MAKEFILENAME} "	@echo; echo \"Binary '${TARGET}' has been placed in ${TARGETDIR} and ${BUILDDIR}/${OS}${VER}/\"; echo";
+else
+echo >${MAKEFILENAME} "${TARGET}-${UNAME_STRING}:	${APP}.c";
+echo >>${MAKEFILENAME} "	rm -f ${BUILDDIR}/${OS}${VER}/${TARGET} ${TECHLIB}/${TARGET}";
+echo >>${MAKEFILENAME} "	${CC} -o ${BUILDDIR}/${OS}${VER}/${TARGET} ${APP}.c ${SOURCEFILE} ${INCLUDE} ${TECHINCLUDE_FLAG} ${DVERSION} ${CFLAGS_APP} ${APPFLAGS} ${TECHLIB_FLAG} ${LIB} ${TARGETDEPS} ${SOCKETDEV} ${WIN32VDEP} ${RUNPATH}";
+echo >>${MAKEFILENAME} "	cp -f ${BUILDDIR}/${OS}${VER}/${TARGET} ${TARGETDIR}/${TARGET}";
+echo >>${MAKEFILENAME} "	@echo; echo \"Binary '${TARGET}' has been placed in ${TARGETDIR} and ${BUILDDIR}/${OS}${VER}/\"; echo";
+fi
+
+${MAKE}  -f ${MAKEFILENAME} ${TARGET}-${UNAME_STRING}
+
